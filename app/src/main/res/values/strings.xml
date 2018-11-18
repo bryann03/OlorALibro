@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Olor A Libro</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="libreria_menu">Librerias</string>
+    <string name="actividades_menu">Actividades</string>
+    <string name="premios">Premios</string>
+    <string name="coste_premio">COSTE PREMIO:</string>
+    <string name="puntos">Pnts.</string>
+    <string name="menu_principal">Menú principal</string>
+    <string name="historial_actividades">Historial Actividades</string>
+    <string name="descripcion">Descripción</string>
+    <string name="contacto">Contacto</string>
+    <string name="Canjear">CANJEAR</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="configuracion">Configuración</string>
+    <string name="Lugar">Lugar</string>
+    <string name="Fecha">Fecha</string>
+    <string name="Precio">Precio</string>
+    <string name="Puntos">Puntos</string>
+    <string name="Apuntarse">Apuntarse</string>
+
+    <string name="contraseña_hint">Contraseña</string>
+    <string name="email_hint">Email</string>
+    <string name="txtBoton_IniciarSesion">Iniciar Sesión</string>
+    <string name="txtBoton_Registrarse">Registrarse</string>
+    <string name="login_olvidadoContraseña">¿Hás olvidado tu contraseña?</string>
+    <string name="login_recuerdame">Recuérdame</string>
+
+</resources>

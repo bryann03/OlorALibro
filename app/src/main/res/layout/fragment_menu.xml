@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.oloralibro.ActivityMenuPrincipal"
+        android:background="@color/letra_blanco"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/titulos"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/Letra_verde"/>
+
+        <Button
+            android:id="@+id/BotonLibrerias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
+            android:padding="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableStart="@drawable/bookstack"
+            android:background="@drawable/bordes_redondeados"
+            android:text="@string/libreria_menu"
+            android:textColor="@color/letra_blanco"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/BotonActividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
+            android:padding="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableStart="@drawable/puzzleblanco"
+            android:background="@drawable/bordes_redondeados"
+            android:textColor="@color/letra_blanco"
+            android:text="@string/actividades_menu"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/BotonPremios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
+            android:padding="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableStart="@drawable/iconopremio2"
+            android:background="@drawable/bordes_redondeados"
+            android:textColor="@color/letra_blanco"
+            android:text="@string/premios"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/BotonIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
+            android:padding="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableStart="@drawable/user"
+            android:background="@drawable/bordes_redondeados"
+            android:text="@string/iniciar_sesion"
+            android:textColor="@color/letra_blanco"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/BotonConfiguracion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
+            android:padding="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableStart="@drawable/configuracion"
+            android:background="@drawable/bordes_redondeados"
+            android:textColor="@color/letra_blanco"
+            android:text="@string/configuracion"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+</ScrollView>

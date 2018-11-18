@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ActivityInfoActividades">
+
+        <TextView
+            android:id="@+id/textViewNombreActividad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correr"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/titulos"
+            android:textColor="@color/Letra_verde"/>
+
+        <ImageView
+            android:id="@+id/imageViewActividad"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/margen_titulos"
+            android:src="@drawable/correr"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:background="@drawable/side_nav_bar"
+            android:gravity="center"
+            android:textColor="@color/letra_blanco"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/descripcion"/>
+
+        <TextView
+            android:id="@+id/textViewDescripcionActividad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:padding="5dp"
+            android:textColor="@color/Letra_verde"
+            android:textSize="20sp"
+            android:text="En aquesta activitat ens anirem a córrer per un recorregut de 5KM. Serà una ruta molt representativa per al voltant de Barcelona, vina i gaudeix de la aventura, t'hi esperem!"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/side_nav_bar"
+                android:gravity="center"
+                android:textColor="@color/letra_blanco"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/Lugar"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/side_nav_bar"
+                android:gravity="center"
+                android:textColor="@color/letra_blanco"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/Fecha"
+                android:layout_weight="5"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textViewDireccionActividad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textColor="@color/Letra_verde"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Carrer Arquímedes número 102"
+                android:layout_weight="5"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+            <TextView
+                android:id="@+id/textViewFechaActividad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textColor="@color/Letra_verde"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="18 Octubre - 18:00"
+                android:layout_weight="5"/>
+            </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/side_nav_bar"
+                android:gravity="center"
+                android:textColor="@color/letra_blanco"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/Precio"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/side_nav_bar"
+                android:gravity="center"
+                android:textColor="@color/letra_blanco"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/Puntos"
+                android:layout_weight="5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewPrecioActividad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/Letra_verde"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="50"
+                android:drawableEnd="@drawable/iconeuro"
+                android:layout_weight="5"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+            <TextView
+                android:id="@+id/textViewPuntosPremioActividad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/Letra_verde"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="500"
+                android:drawableEnd="@drawable/iconopremio"
+                android:layout_weight="5"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos" />
+
+        <Button
+            android:id="@+id/buttonApuntarse"
+            android:layout_width="300dp"
+            android:layout_margin="@dimen/margen_titulos"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:background="@drawable/side_nav_bar"
+            android:text="@string/Apuntarse"
+            android:layout_gravity="center"
+            android:textColor="@color/letra_blanco"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

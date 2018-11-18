@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ActivityInfoLibreria">
+
+        <TextView
+            android:id="@+id/textViewLibreria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Abacus"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/titulos"
+            android:textColor="@color/Letra_verde"/>
+
+       <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/margen_titulos"
+            android:src="@drawable/casalibro"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:background="@drawable/side_nav_bar"
+            android:gravity="center"
+            android:textColor="@color/letra_blanco"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/descripcion"/>
+
+        <TextView
+            android:id="@+id/textViewDescripcionLibreria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:padding="5dp"
+            android:textColor="@color/Letra_verde"
+            android:textSize="20sp"
+            android:text="El esperado regreso de la acústica Squier ya está aquí, la SA-105. Una sensacional dreadnought de dulce sonido, y que no te va a romper el bolsillo. Cuenta con una tapa, aros y fondo laminados de tilo, con un diapasón y puente de arce teñidos de oscuro."
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:background="@drawable/side_nav_bar"
+            android:gravity="center"
+            android:textColor="@color/letra_blanco"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/actividades_menu"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos">
+
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:background="@drawable/side_nav_bar"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/contacto"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margen_titulos"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Telefono:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="62548798"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margen_titulos"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Horario:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Lun. - Sab. 10h - 18h"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:background="@color/colorAccent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margen_titulos"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Correo:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="libreriastudio@gmail.com"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/textViewUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:layout_marginStart="@dimen/margen_titulos"
+            android:layout_marginEnd="@dimen/margen_titulos"
+            android:layout_marginBottom="@dimen/margen_titulos"
+            android:background="@drawable/side_nav_bar"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:text="Pincha aquí y encuéntranos"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/cardViewLibrerias"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="10dp"
+    card_view:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewLibreria"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/casalibro" />
+
+        <TextView
+            android:id="@+id/textViewNombreLibreria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/books"
+            android:text="Libreria Estudio"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:gravity="center_horizontal|center"
+            android:textColor="@color/Letra_verde"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/textViewPoblaciónLibreria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/Letra_verde"
+                android:text="Barcelona"
+                android:gravity="center"
+                android:drawableEnd="@drawable/iconubicacion"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

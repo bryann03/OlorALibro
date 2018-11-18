@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Librerias"
+            android:icon="@drawable/books"
+            android:title="@string/libreria_menu"/>
+        <item
+            android:id="@+id/Actividades"
+            android:icon="@drawable/puzzle"
+            android:title="@string/actividades_menu"/>
+        <item
+            android:id="@+id/Premios"
+            android:icon="@drawable/premio2"
+            android:title="@string/premios"/>
+        <item
+            android:id="@+id/HistorialActividades"
+            android:icon="@drawable/iconhistory"
+            android:title="@string/historial_actividades"/>
+    </group>
+
+    <group
+        android:id="@+id/menuPrinci"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/iconhome"
+            android:title="@string/menu_principal"/>
+    </group>
+
+</menu>
