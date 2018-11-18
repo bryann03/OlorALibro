@@ -17,6 +17,7 @@ public class ActivityIniciarSesion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
         setTitle("Iniciar sesión");
+
         //Muestra el botón para ir atrás
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

@@ -72,6 +72,8 @@ public class RVAdaptadorLibrerias extends RecyclerView.Adapter<RVAdaptadorLibrer
             imagenLibreria = (ImageView)itemView.findViewById(R.id.imageViewLibreria);
         }
 
+
+        //OBTIENE LA POSICION DEL ELEMENTO
         @Override
         public void onItemClick(View v, int position) {
             if (recyclerViewOnItemClickListener != null) {

@@ -67,6 +67,7 @@ public class ActivityInfoLibreria extends AppCompatActivity implements Toolbar.O
         return super.onOptionsItemSelected(item);
     }
 
+    //METODO PARA OBTENER LA LOCALIZACION AL ABRIR MAPS
     protected void getLocation(String nombreLibreria)
     {
         double latitude = 41.3818;

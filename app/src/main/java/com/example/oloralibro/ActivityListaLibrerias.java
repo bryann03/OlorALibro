@@ -35,8 +35,10 @@ public class ActivityListaLibrerias extends AppCompatActivity {
             public void onItemClick(View v, int position) {
 
                 Intent activityInfoLibreria = new Intent(getApplicationContext(), ActivityInfoLibreria.class);
+
                 //CREA UN OBJETO DE LA CLASE DATOSLIBRERIA A LA QUE SE LE ASIGNA LA POSICION DEL ONITEMCLICK
                 DatosLibreria nomLibreria = librerias.get(position);
+
                 //EXTRAE EL TEXTO DEL NOMBRE DE LA LIBRERIA Y LO PASA POR PARAMETRO TIPO STRING CON EL INTENT
                 activityInfoLibreria.putExtra("nombreLibreria", nomLibreria.nombreLibreria);
                 startActivity(activityInfoLibreria);

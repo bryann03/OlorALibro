@@ -24,7 +24,10 @@ public class ActivityListaPremios extends AppCompatActivity {
         setContentView(R.layout.activity_lista_premios);
 
         rvPremios = (RecyclerView) findViewById(R.id.rvPremios);
+
+        //EVITA QUE SE CAMBIE EL TAMAÑO DEL RECYVLERVIEW
         rvPremios.setHasFixedSize(true);
+
         LinearLayoutManager llm = new LinearLayoutManager(context);
         rvPremios.setLayoutManager(llm);
         premios = RepositorioDatos.getDatosPremios();
