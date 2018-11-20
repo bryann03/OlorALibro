@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ActivityMenuPrincipal2 extends AppCompatActivity {
+public class ActivityMenu extends AppCompatActivity {
 
     Button botonLibrerias, botonActividades, botonIniciarSesion, botonPremios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_principal2);
+        setContentView(R.layout.activity_menu);
         setTitle("¡Bienvenido a Olor a libro!");
 
         botonLibrerias = (Button) findViewById(R.id.BotonLibrerias);
