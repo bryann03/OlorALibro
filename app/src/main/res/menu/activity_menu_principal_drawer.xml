@@ -8,18 +8,6 @@
             android:id="@+id/Librerias"
             android:icon="@drawable/books"
             android:title="@string/libreria_menu"/>
-        <item
-            android:id="@+id/Actividades"
-            android:icon="@drawable/puzzle"
-            android:title="@string/actividades_menu"/>
-        <item
-            android:id="@+id/Premios"
-            android:icon="@drawable/premio2"
-            android:title="@string/premios"/>
-        <item
-            android:id="@+id/HistorialActividades"
-            android:icon="@drawable/iconhistory"
-            android:title="@string/historial_actividades"/>
     </group>
 
     <group

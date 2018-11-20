@@ -135,14 +135,6 @@ public class ActivityMenuPrincipal extends AppCompatActivity
 			//fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentLibrerias()).addToBackStack("tag").commit();
 
 		}
-		else if (id == R.id.Actividades)
-		{
-
-		}
-		else if (id == R.id.Premios)
-		{
-			//fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentPremios()).addToBackStack("tag").commit();
-		}
 		else if (id == R.id.menuPrinci)
 		{
 			fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentMenu()).commit();

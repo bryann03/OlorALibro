@@ -12,9 +12,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ActivityMenuPrincipal"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".ActivityMenuPrincipal2"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +27,7 @@
         <activity android:name=".ActivityHistorialActividades" />
         <activity android:name=".ActivityListaLibrerias" />
         <activity android:name=".ActivityListaActividades" />
-        <activity android:name=".ActivityListaPremios"/>
+        <activity android:name=".ActivityListaPremios" />
     </application>
 
 </manifest>

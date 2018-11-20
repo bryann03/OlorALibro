@@ -2,8 +2,7 @@
     <string name="app_name">Olor A Libro</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Olor A Libro</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -17,6 +16,8 @@
     <string name="descripcion">Descripción</string>
     <string name="contacto">Contacto</string>
     <string name="Canjear">CANJEAR</string>
+    <string name="historial_act">Historial de actividades</string>
+    <string name="acerca_de">Sobre nosotros</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="configuracion">Configuración</string>
     <string name="Lugar">Lugar</string>
