@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.oloralibro.Adaptadores.RVAdaptadorPremios;
@@ -18,6 +20,8 @@ public class ActivityListaPremios extends AppCompatActivity {
     RecyclerView rvPremios;
     Context context;
     public ArrayList<DatosPremios> premios;
+    TextView txtViewMisPuntos;
+    int misPuntos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +32,30 @@ public class ActivityListaPremios extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         setContentView(R.layout.activity_lista_premios);
 
-        rvPremios = (RecyclerView) findViewById(R.id.rvPremios);
+        rvPremios = findViewById(R.id.rvPremios);
+        txtViewMisPuntos = findViewById(R.id.txtViewMisPuntos);
+        misPuntos = Integer.parseInt(txtViewMisPuntos.getText().toString());
 
         //EVITA QUE SE CAMBIE EL TAMAÑO DEL RECYVLERVIEW
         rvPremios.setHasFixedSize(true);
 
+
         LinearLayoutManager llm = new LinearLayoutManager(context);
         rvPremios.setLayoutManager(llm);
         premios = RepositorioDatos.getDatosPremios();
-        RVAdaptadorPremios adaptador = new RVAdaptadorPremios(premios);
+        RVAdaptadorPremios adaptador = new RVAdaptadorPremios(premios, new RecyclerViewOnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                final DatosPremios premio = premios.get(position);
+                if(premio.costePremio > misPuntos){
+                    MetodosVarios.mostrarToast(getApplicationContext(), "PUNTOS INSUFICIENTES");
+                }
+                else{
+                    MetodosVarios.mostrarToast(getApplicationContext(), "CANJEADO!");
+                }
+            }
+        });
+
         rvPremios.setAdapter(adaptador);
     }
 
