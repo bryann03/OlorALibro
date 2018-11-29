@@ -19,7 +19,6 @@ public class ActivityInfoLibreria extends AppCompatActivity implements Toolbar.O
 {
 
     TextView textViewLibreria, textViewUbicacion;
-    //MetodosVarios metodosVarios = new MetodosVarios();
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -30,7 +29,7 @@ public class ActivityInfoLibreria extends AppCompatActivity implements Toolbar.O
         //Muestra el botón para ir atrás
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        setTitle("Librerias");
+
 
         /*IMPLEMENTA EL ICONO "HOME" EN LA STATUS BAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -44,10 +43,9 @@ public class ActivityInfoLibreria extends AppCompatActivity implements Toolbar.O
         b = getIntent().getExtras();
         final String nombreLibreria = b.getString("nombreLibreria");*/
 
-        //final String nombreLibreria = metodosVarios.obtenerStringIntent("nombreLibreria");
         final String nombreLibreria = getIntent().getExtras().getString("nombreLibreria");
         textViewLibreria.setText(nombreLibreria);
-
+        setTitle(nombreLibreria);
         textViewUbicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

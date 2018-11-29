@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.oloralibro.Adaptadores.RVAdaptadorLibrerias;
@@ -22,7 +23,12 @@ public class ActivityListaLibrerias extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_librerias);
+
+        //Muestra el botón para ir atrás
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         setTitle("Librerias");
+
         rvLibrerias = (RecyclerView) findViewById(R.id.rvLibrerias);
         rvLibrerias.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(context);
@@ -45,5 +51,15 @@ public class ActivityListaLibrerias extends AppCompatActivity {
             }
         });
         rvLibrerias.setAdapter(adaptador);
+    }
+
+    //METODO PARA CERRAR LA ACTIVIDAD A TRAVES DEL BOTÓN
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId()==android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

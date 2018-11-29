@@ -8,10 +8,10 @@ import android.view.MenuItem;
 public class MetodosVarios extends AppCompatActivity {
 
     //METODO PARA LANZAR EL INTENT Y ABRIR UNA ACTIVITY
-    public void abrirActivity(Context context, Class clase)
+    public static void abrirActivity(Context context, Class clase)
     {
         Intent activity = new Intent(context, clase);
-        startActivity(activity);
+        context.startActivity(activity);
     }
 
     public String obtenerStringIntent(String clave)

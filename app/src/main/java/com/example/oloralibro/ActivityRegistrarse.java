@@ -3,6 +3,7 @@ package com.example.oloralibro;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -21,6 +22,13 @@ public class ActivityRegistrarse extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
+
+        //Muestra el botón para ir atrás
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        //Esconde la StatusBar del movil
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setTitle("Registro");
 
         editTextRegistroNombre = findViewById(R.id.editTextRegistroNombre);
@@ -44,13 +52,19 @@ public class ActivityRegistrarse extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent pantallaInicioSesión = new Intent(getApplicationContext(), ActivityIniciarSesion.class);
-                    startActivity(pantallaInicioSesión);
+                    finish();
                 }
             }
         });
+    }
 
-        //Esconde la StatusBar del movil
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    //METODO PARA CERRAR LA ACTIVIDAD A TRAVES DEL BOTÓN
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId()==android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

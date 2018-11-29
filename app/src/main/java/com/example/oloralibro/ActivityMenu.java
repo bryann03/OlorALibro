@@ -11,8 +11,6 @@ public class ActivityMenu extends AppCompatActivity {
 
     Button botonLibrerias, botonActividades, botonIniciarSesion, botonPremios;
 
-    //SE CREA UN OBJETO DE LA CLASE MetodosVarios PARA PODER UTILIZAR SUS METODOS
-    MetodosVarios metodosVarios = new MetodosVarios();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +30,7 @@ public class ActivityMenu extends AppCompatActivity {
                 //REEMPLAZA EL CONTENEDOR DE LOS FRAGMENTS POR UNO ESPECIFICO
                 //con "addToBackStack" se puede volver al fragment anterior
                 //fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentLibrerias()).addToBackStack("tag").commit();
-                metodosVarios.abrirActivity(getApplicationContext(), ActivityListaLibrerias.class);
+                MetodosVarios.abrirActivity(getApplicationContext(), ActivityListaLibrerias.class);
 
             }
         });
@@ -40,7 +38,7 @@ public class ActivityMenu extends AppCompatActivity {
         botonActividades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                metodosVarios.abrirActivity(getApplicationContext(), ActivityInfoActividades.class);
+                MetodosVarios.abrirActivity(getApplicationContext(), ActivityInfoActividades.class);
 
             }
         });
@@ -48,7 +46,7 @@ public class ActivityMenu extends AppCompatActivity {
         botonIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                metodosVarios.abrirActivity(getApplicationContext(), ActivityIniciarSesion.class);
+                MetodosVarios.abrirActivity(getApplicationContext(), ActivityIniciarSesion.class);
 
             }
         });
@@ -56,7 +54,7 @@ public class ActivityMenu extends AppCompatActivity {
         botonPremios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                metodosVarios.abrirActivity(getApplicationContext(), ActivityListaPremios.class);
+                MetodosVarios.abrirActivity(getApplicationContext(), ActivityListaPremios.class);
             }
         });
     }
