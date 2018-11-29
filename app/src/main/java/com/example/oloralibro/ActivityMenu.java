@@ -10,6 +10,8 @@ import android.widget.Button;
 public class ActivityMenu extends AppCompatActivity {
 
     Button botonLibrerias, botonActividades, botonIniciarSesion, botonPremios;
+
+    //SE CREA UN OBJETO DE LA CLASE MetodosVarios PARA PODER UTILIZAR SUS METODOS
     MetodosVarios metodosVarios = new MetodosVarios();
 
     @Override
@@ -31,7 +33,6 @@ public class ActivityMenu extends AppCompatActivity {
                 //con "addToBackStack" se puede volver al fragment anterior
                 //fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentLibrerias()).addToBackStack("tag").commit();
                 metodosVarios.abrirActivity(getApplicationContext(), ActivityListaLibrerias.class);
-                //abrirActivity(getApplicationContext(), ActivityListaLibrerias.class);
 
             }
         });
@@ -40,7 +41,6 @@ public class ActivityMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 metodosVarios.abrirActivity(getApplicationContext(), ActivityInfoActividades.class);
-                //abrirActivity(getApplicationContext(), ActivityInfoActividades.class);
 
             }
         });
@@ -49,7 +49,6 @@ public class ActivityMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 metodosVarios.abrirActivity(getApplicationContext(), ActivityIniciarSesion.class);
-                //abrirActivity(getApplicationContext(), ActivityIniciarSesion.class);
 
             }
         });
@@ -58,15 +57,8 @@ public class ActivityMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 metodosVarios.abrirActivity(getApplicationContext(), ActivityListaPremios.class);
-                //abrirActivity(getApplicationContext(), ActivityListaPremios.class);
             }
         });
     }
 
-    /*//METODO PARA LANZAR EL INTENT Y ABRIR UNA ACTIVITY
-    public void abrirActivity(Context context, Class clase)
-    {
-        Intent activity = new Intent(context, clase);
-        startActivity(activity);
-    }*/
 }
