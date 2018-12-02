@@ -33,4 +33,12 @@
     <string name="login_olvidadoContraseña">¿Hás olvidado tu contraseña?</string>
     <string name="login_recuerdame">Recuérdame</string>
 
+    //DIALOG STRINGS
+    <string name="canjear_premio">Canjear premio</string>
+    //EL CARACTER &#160; SRIVE PARA AÑADIR UN ESPACIO
+    <string name="pregunta_canjear_1">¿Deseas canjear este premio por&#160;</string>
+    <string name="pregunta_canjear_2">&#160;puntos?</string>
+    <string name="puntos_insuf">¡PUNTOS INSUFICIENTES!</string>
+    <string name="canjeado">¡CANJEAD0!</string>
+    <string name="cancelar">CANCELAR</string>
 </resources>
