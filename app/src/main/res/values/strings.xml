@@ -6,6 +6,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="mnsje_bienvenida">¡Bienvenido a Olor a libro!</string>
     <string name="libreria_menu">Librerias</string>
     <string name="actividades_menu">Actividades</string>
     <string name="premios">Premios</string>
@@ -35,8 +36,13 @@
 
     //DIALOG STRINGS
     <string name="canjear_premio">Canjear premio</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
     //EL CARACTER &#160; SRIVE PARA AÑADIR UN ESPACIO
     <string name="pregunta_canjear_1">¿Deseas canjear este premio por&#160;</string>
+    <string name="pregunta_cerrar_sesion">¿Deseas finalizar tu sesión?</string>
+    <string name="Si">Sí</string>
+
     <string name="pregunta_canjear_2">&#160;puntos?</string>
     <string name="puntos_insuf">¡PUNTOS INSUFICIENTES!</string>
     <string name="canjeado">¡CANJEAD0!</string>

@@ -1,5 +1,6 @@
 package com.example.oloralibro;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,6 +53,10 @@ public class ActivityRegistrarse extends AppCompatActivity {
                 }
                 else
                 {
+                    //GUARDAR USUARIO EN ARCHIVO JSON!!!!!!!
+                    Intent iniciarSesion = new Intent();
+                    iniciarSesion.putExtra("emailUser", editTextRegistroEmail.getText().toString());
+                    setResult(Activity.RESULT_OK, iniciarSesion);
                     finish();
                 }
             }
