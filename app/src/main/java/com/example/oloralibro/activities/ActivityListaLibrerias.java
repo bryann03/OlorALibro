@@ -1,4 +1,4 @@
-package com.example.oloralibro;
+package com.example.oloralibro.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,8 +8,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.example.oloralibro.Adaptadores.RVAdaptadorLibrerias;
+import com.example.oloralibro.DatosLibreria;
+import com.example.oloralibro.R;
+import com.example.oloralibro.Interfaces.RecyclerViewOnItemClickListener;
+import com.example.oloralibro.RepositorioDatos;
 
 import java.util.ArrayList;
 
@@ -27,7 +32,9 @@ public class ActivityListaLibrerias extends AppCompatActivity {
         //Muestra el botón para ir atrás
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        setTitle("Librerias");
+        //Esconde la StatusBar del movil
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setTitle(R.string.libreria_menu);
 
         rvLibrerias = (RecyclerView) findViewById(R.id.rvLibrerias);
         rvLibrerias.setHasFixedSize(true);
@@ -57,9 +64,11 @@ public class ActivityListaLibrerias extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        if(item.getItemId()==android.R.id.home){
+        if(item.getItemId() == android.R.id.home){
             finish();
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

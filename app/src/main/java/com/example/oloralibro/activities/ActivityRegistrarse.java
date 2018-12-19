@@ -1,4 +1,4 @@
-package com.example.oloralibro;
+package com.example.oloralibro.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.example.oloralibro.MetodosVarios;
+import com.example.oloralibro.R;
 
 public class ActivityRegistrarse extends AppCompatActivity {
 
@@ -48,15 +50,40 @@ public class ActivityRegistrarse extends AppCompatActivity {
                         editTextRegistroEmail.getText().toString().isEmpty() || editTextRegistroContraseña.getText().toString().isEmpty() ||
                         editTextRegistroRepiteContraseña.getText().toString().isEmpty())
                 {
-                    Toast t1 = Toast.makeText(getApplicationContext(),"Uno o mas campos están vacios", Toast.LENGTH_SHORT);
-                    t1.show();
+                    MetodosVarios.mostrarToast(getApplicationContext(), "Uno o mas campos están vacios");
+                }
+                else if (!editTextRegistroContraseña.getText().toString().equals(editTextRegistroRepiteContraseña.getText().toString()))
+                {
+                    MetodosVarios.mostrarToast(getApplicationContext(),"¡Las contraseñas no coinciden!");
                 }
                 else
                 {
-                    //GUARDAR USUARIO EN ARCHIVO JSON!!!!!!!
-                    Intent iniciarSesion = new Intent();
+                    /*//GUARDAR USUARIO EN ARCHIVO JSON!!!!!!!
+                    String nombre, apellido, email, contraseña;
+                    nombre = editTextRegistroNombre.getText().toString();
+                    apellido = editTextRegistroApellido.getText().toString();
+                    email = editTextRegistroEmail.getText().toString();
+                    contraseña = editTextRegistroContraseña.getText().toString();
+
+                    JSONObject json = new JSONObject();
+
+                    try
+                    {
+                        json.put("nombreUser", nombre);
+                        json.put("apellidoUser", apellido);
+                        json.put("emailUser", email);
+                        json.put("contraseñaUser", contraseña);
+                    }
+                    catch (JSONException e)
+                    {
+
+                    }*/
+                    Intent iniciarSesion = new Intent(getApplicationContext(), ActivityIniciarSesion.class);
+                    iniciarSesion.putExtra("userSesionIniciada", 1);
                     iniciarSesion.putExtra("emailUser", editTextRegistroEmail.getText().toString());
-                    setResult(Activity.RESULT_OK, iniciarSesion);
+                    iniciarSesion.putExtra("nombreUser", editTextRegistroNombre.getText().toString());
+                    //setResult(Activity.RESULT_OK, iniciarSesion);
+                    startActivity(iniciarSesion);
                     finish();
                 }
             }

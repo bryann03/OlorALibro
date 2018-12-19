@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.oloralibro.ActivityMenuPrincipal"
+        tools:context="com.example.oloralibro.activities.ActivityMenuPrincipal"
         android:background="@color/letra_blanco"
         android:orientation="vertical">
 
@@ -17,25 +17,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:src="@drawable/logoproyecto"/>
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:text="@string/app_name"
-                android:textSize="@dimen/titulos"
-                android:layout_gravity="center"
+                android:textSize="50sp"
+                android:gravity="center"
                 android:textColor="@color/Letra_verde"/>
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/officiallogoapp"/>
 
         </LinearLayout>
 
@@ -59,8 +56,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
             android:padding="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:drawableStart="@drawable/puzzleblanco"
             android:background="@drawable/bordes_redondeados"
             android:textColor="@color/letra_blanco"
@@ -73,8 +68,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
             android:padding="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:drawableStart="@drawable/iconopremio2"
             android:background="@drawable/bordes_redondeados"
             android:textColor="@color/letra_blanco"
@@ -87,8 +80,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
             android:padding="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:drawableStart="@drawable/user"
             android:background="@drawable/bordes_redondeados"
             android:text="@string/iniciar_sesion"
@@ -101,8 +92,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
             android:padding="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:drawableStart="@drawable/configuracion"
             android:background="@drawable/bordes_redondeados"
             android:textColor="@color/letra_blanco"
@@ -115,13 +104,22 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
             android:padding="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:drawableStart="@drawable/iconinterrogation"
             android:background="@drawable/bordes_redondeados"
             android:textColor="@color/letra_blanco"
             android:text="@string/acerca_de"
             android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margen_titulos"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/copyright"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="@color/letra_blanco"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 </ScrollView>

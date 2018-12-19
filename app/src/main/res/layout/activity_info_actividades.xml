@@ -10,12 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".ActivityInfoActividades">
+        tools:context=".activities.ActivityInfoActividades">
 
         <TextView
             android:id="@+id/textViewNombreActividad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
             android:text="Correr"
             android:gravity="center_horizontal"
             android:textSize="@dimen/titulos"

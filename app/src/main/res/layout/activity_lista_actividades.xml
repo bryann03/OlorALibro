@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityListaActividades">
+    android:orientation="vertical"
+    tools:context=".activities.ActivityListaActividades">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewActividadesDisponibles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen_titulos"
+        android:text="@string/actividades_menu"
+        android:gravity="center"
+        android:textSize="@dimen/titulos"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <ListView
+        android:id="@+id/listViewActividades"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

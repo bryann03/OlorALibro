@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">Olor A Libro</string>
+    <string name="app_name" translatable="false">Olor A Libro</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Olor A Libro</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="mnsje_bienvenida">¡Bienvenido a Olor a libro!</string>
+    <string name="mnsje_bienvenida_1">¡Bienvenido a&#160;</string>
+    <string name="mnsje_bienvenida_2">¡Bienvenido&#160;</string>
     <string name="libreria_menu">Librerias</string>
     <string name="actividades_menu">Actividades</string>
     <string name="premios">Premios</string>
@@ -47,4 +48,53 @@
     <string name="puntos_insuf">¡PUNTOS INSUFICIENTES!</string>
     <string name="canjeado">¡CANJEAD0!</string>
     <string name="cancelar">CANCELAR</string>
+
+    //ACTIVITY CONFIGURACION
+    <string name="general">General</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="texto_notificaciones">Administrar los ajustes de notificaciones</string>
+    <string name="preferencia_lib">Preferencia de Librerias</string>
+    <string name="texto_preferencias_lib">Cualquier distancia</string>
+    <string name="preferencia_actividades">Preferencia de Actividades</string>
+    <string name="texto_preferencia_act">Cualquier actividad</string>
+    <string name="historial_configuracion">Borrar Historial de Actividades</string>
+    <string name="texto_historial_configuracion">Eliminar historial de las actividades realizadas</string>
+    <string name="control_parental">Control Parental</string>
+    <string name="texto_control_parental">Desactivado</string>
+    <string name="autentificacion">Pedir autentificacion para apuntarse a actividades</string>
+    <string name="texto_autentificacion">Siempre</string>
+    <string name="control_usuario">Controles de usuario</string>
+    <string name="idiomas">Idiomas</string>
+    <string name="cambia_tu_idioma">Cambia el idioma haciendo clic en tu bandera</string>
+
+    <string name="titulo_lista_act">Actividades para&#160;</string>
+
+    <string name="apuntado_actividad">¡Felicidades, te has apuntado correctamente ésta actividad!</string>
+
+    //ACTIVITY SOBRE NOSOTROS
+    <string name="quienes_somos">Quiénes somos?</string>
+    <string name="quienes_somos_expl">Somos un grupo de cuatro personas del Centro de Estudios politécnicos (CEP), estudiantes de 2o de grado superior. El grupo está formado por Oriol Roma, Oriol Gómez, Bryan H. y Miquel Puente</string>
+    <string name="como_surgio">Cómo surgió?</string>
+    <string name="como_surgio_expl">Este proyecto ha surgido a través de una metodología de aprendizaje llamada ABP, que se trata de aprender a base de proyectos. Este ha sido el primer proyecto de principalmente tres que se realizarán este año académico en el Centro de Estudios Politécnicos (CEP).</string>
+    <string name="contactanos">Contáctanos</string>
+    <string name="contactanos_expl">Puedes contactarnos a través de la siguiente dirección de correo, teléfono o assistiendo a nuestras clases:</string>
+    <string name="no_permiso_llamada">"No has otorgado permisos para realizar llamadas"</string>
+
+    //ACTIVITY_INFO_LIBRERIA
+    <string name="telefono">Teléfono:</string>
+    <string name="horario">Horario:</string>
+    <string name="correo">Correo</string>
+    <string name="mira_actividades">¡Pincha aquí y mira las actividades!</string>
+    <string name="encuentranos">¡Pincha aquí y encuéntranos!</string>
+
+    //ACTIVITY REGISTRARSE
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="repite_contra">Repite contraseña</string>
+    <string name="terminos">Acepto los términos y condiciones</string>
+    <string name="publicidad_engañosa">Acepto recibir publicidad engañosa</string>
+
+    //ACTIVITY MENU
+    <string name="copyright">COPYRIGHT OlorALibro S.A.\n TODOS LOS DERECHOS RESERVADOS</string>
+
 </resources>

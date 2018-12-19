@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".ActivityRegistrarse">
+        tools:context=".activities.ActivityRegistrarse">
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:focusable="true"
-                android:hint="Nombre"
+                android:hint="@string/nombre"
                 android:imeOptions="actionDone"
                 android:inputType="textPersonName"
                 android:singleLine="true"/>
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:focusable="true"
-                android:hint="Apellido"
+                android:hint="@string/apellido"
                 android:imeOptions="actionDone"
                 android:inputType="textPersonName"
                 android:singleLine="true"/>
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:focusable="true"
-                android:hint="Repite Contraseña"
+                android:hint="@string/repite_contra"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:singleLine="true"/>
@@ -123,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
-            android:text="Acepto los términos y condiciones"
+            android:text="@string/terminos"
             android:textColor="@color/Letra_verde"
             android:textStyle="bold"/>
 
@@ -132,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margen_titulos"
-            android:text="Acepto recibir publicidad engañosa"
+            android:text="@string/publicidad_engañosa"
             android:textColor="@color/Letra_verde"
             android:textStyle="bold"/>
 

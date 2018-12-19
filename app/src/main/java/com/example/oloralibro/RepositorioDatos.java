@@ -1,26 +1,33 @@
 package com.example.oloralibro;
 
+import android.content.Context;
+import org.json.JSONException;
+import android.content.res.AssetManager;
+
 import com.example.oloralibro.DatosLibreria;
 import com.example.oloralibro.R;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class RepositorioDatos
 {
-    //METODO PARA RELLENAR Y OBTENER LOS DATOS LAS LIBRERIAS
+    //METODO PARA RELLENAR Y OBTENER LOS DATOS LAS LIBRERIAS EN LAS CARDVIEW'S
     public static ArrayList<DatosLibreria> getDatosLibrerias()
     {
         ArrayList<DatosLibreria> librerias = new ArrayList<>();
-        librerias.add(new DatosLibreria("Libreria Studio","Barcelona", R.drawable.libreriacomics));
-        librerias.add(new DatosLibreria("Libreira Santako", "Santa Coloma de Gramenet", R.drawable.libreriacomics));
-        librerias.add(new DatosLibreria("Libreria Badalona", "Badalona", R.drawable.libreriacomics));
-        librerias.add(new DatosLibreria("Libreria Vic","VIc", R.drawable.libreriacomics));
-        librerias.add(new DatosLibreria("Libreira Betis", "Calle Retis 30", R.drawable.libreriacomics));
-        librerias.add(new DatosLibreria("Libreria Ana", "Av Santa Ana 2000", R.drawable.libreriacomics));
+        librerias.add(new DatosLibreria("Libreria Studio","Calle Aribau, 93", R.drawable.libstudio));
+        librerias.add(new DatosLibreria("Libreria Santaco", "Calle Benidorm, 23", R.drawable.libsantaco));
+        librerias.add(new DatosLibreria("Libreria Badalona", "Calle Guifré, 11", R.drawable.libadalona));
+        librerias.add(new DatosLibreria("Libreria Vic","Calle Pellaires, 32", R.drawable.libvic));
+        librerias.add(new DatosLibreria("Libreria Betis", "Avenida de Les Corts, 34", R.drawable.libetis));
+        librerias.add(new DatosLibreria("Libreria Ana", "Calle Santa Ana, 21", R.drawable.libana));
+        librerias.add(new DatosLibreria("Libreria Paquito", "Calle el valle, 50", R.drawable.libpaquito));
         return librerias;
     }
 
-    //METODO PARA RELLENAR Y OBTENER LOS DATOS DE LOS PREMIOS
+    //METODO PARA RELLENAR Y OBTENER LOS DATOS DE LOS PREMIOS EN LAS CARDVIEW'S
     public static ArrayList<DatosPremios> getDatosPremios()
     {
         ArrayList<DatosPremios> premios = new ArrayList<>();

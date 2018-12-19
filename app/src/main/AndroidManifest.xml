@@ -3,16 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.oloralibro">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ActivityMenu"
+            android:name=".activities.ActivityMenu"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,14 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityInfoActividades" />
-        <activity android:name=".ActivityInfoLibreria" />
-        <activity android:name=".ActivityIniciarSesion" />
-        <activity android:name=".ActivityRegistrarse" />
-        <activity android:name=".ActivityHistorialActividades" />
-        <activity android:name=".ActivityListaLibrerias" />
-        <activity android:name=".ActivityListaActividades" />
-        <activity android:name=".ActivityListaPremios" />
+        <activity android:name=".activities.ActivityInfoActividades" />
+        <activity android:name=".activities.ActivityInfoLibreria" />
+        <activity android:name=".activities.ActivityIniciarSesion" />
+        <activity android:name=".activities.ActivityRegistrarse" />
+        <activity android:name=".activities.ActivityHistorialActividades" />
+        <activity android:name=".activities.ActivityListaLibrerias" />
+        <activity android:name=".activities.ActivityListaActividades" />
+        <activity android:name=".activities.ActivityListaPremios" />
+        <activity android:name=".activities.ActivityConfiguracion" />
+        <activity android:name=".activities.ActivitySobreNosotros"></activity>
     </application>
 
 </manifest>

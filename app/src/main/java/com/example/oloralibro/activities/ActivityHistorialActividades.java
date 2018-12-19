@@ -1,8 +1,10 @@
-package com.example.oloralibro;
+package com.example.oloralibro.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import com.example.oloralibro.R;
 
 public class ActivityHistorialActividades extends AppCompatActivity {
 

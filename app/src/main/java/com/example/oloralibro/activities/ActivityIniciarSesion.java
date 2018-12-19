@@ -1,17 +1,15 @@
-package com.example.oloralibro;
+package com.example.oloralibro.activities;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.oloralibro.R;
 
 public class ActivityIniciarSesion extends AppCompatActivity {
 
@@ -38,8 +36,14 @@ public class ActivityIniciarSesion extends AppCompatActivity {
         botonIniciarSesion = findViewById(R.id.botonIniciarSesion);
 
         //RECIBO INTENT CON EL EMAIL DEL USUARIO
+        final int userSesionIniciada = getIntent().getIntExtra("userSesionIniciada", 0);
+        final String nombreUser = getIntent().getStringExtra("nombreUser");
         final String emailUser = getIntent().getStringExtra("emailUser");
 
+        if(userSesionIniciada == 1)
+        {
+            editTextEmail.setText(emailUser);
+        }
 
         botonRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +52,8 @@ public class ActivityIniciarSesion extends AppCompatActivity {
                 //SE LANZA LA ACTIVIDAD DEL MENU PRINCIPAL CON EL ForResult PARA QUE SE RECIBA EL EMAIL INTORDUCIDO
                 //AL HACER EL REGISTRO
                 Intent activityRegistrarse = new Intent(getApplicationContext(), ActivityRegistrarse.class);
-                startActivityForResult(activityRegistrarse, ACTIVITY_CODIGO);
+                startActivity(activityRegistrarse);
+                finish();
             }
         });
 
@@ -61,7 +66,9 @@ public class ActivityIniciarSesion extends AppCompatActivity {
                 //SALE UN MENSJAE DE ERROR
                 Intent activityMenuPrincipal = new Intent(getApplicationContext(), ActivityMenu.class);
                 activityMenuPrincipal.putExtra("userSesionIniciada", 1);
+                activityMenuPrincipal.putExtra("nombreUser", nombreUser);
                 startActivity(activityMenuPrincipal);
+                finish();
 
                 /*if(COMPROBACION DEL USUARIO CON EL JSON PA`VER SI EXISTE)
                 {
@@ -85,7 +92,7 @@ public class ActivityIniciarSesion extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //METODO PARA RECIBIR DATOS DE OTRO ACTIVITY
+    /*//METODO PARA RECIBIR DATOS DE OTRO ACTIVITY
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
@@ -96,5 +103,5 @@ public class ActivityIniciarSesion extends AppCompatActivity {
             String emailUser = data.getStringExtra("emailUser");
             editTextEmail.setText(emailUser);
         }
-    }
+    }*/
 }

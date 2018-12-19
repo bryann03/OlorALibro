@@ -44,7 +44,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="@dimen/margen_titulos"
                 android:layout_marginStart="@dimen/margen_titulos"
-                android:text="500"
+                android:text="1000"
                 android:textStyle="bold"
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp" />

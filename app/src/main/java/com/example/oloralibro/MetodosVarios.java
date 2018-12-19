@@ -9,6 +9,11 @@ import android.text.Html;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class MetodosVarios extends AppCompatActivity {
 
     //METODO PARA LANZAR EL INTENT Y ABRIR UNA ACTIVITY
@@ -18,10 +23,28 @@ public class MetodosVarios extends AppCompatActivity {
         context.startActivity(activity);
     }
 
-    public String obtenerStringIntent(String clave)
+
+    public static String readJSONFromFile(Context context, int rutaJSON) throws IOException
     {
-        String stringIntent = getIntent().getExtras().getString(clave);
-        return stringIntent;
+        InputStream inputStream = null;
+        StringBuilder builder = new StringBuilder();
+
+        try
+        {
+            String jsonDataString = null;
+            inputStream = context.getResources().openRawResource(rutaJSON);
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(inputStream, "UTF-8"));
+            while ((jsonDataString = bufferedReader.readLine()) != null){
+                builder.append(jsonDataString);
+            }
+        } finally {
+            if (inputStream != null){
+                inputStream.close();
+            }
+        }
+
+        return new String(builder);
     }
 
     public static void mostrarToast(Context context, String mensaje)

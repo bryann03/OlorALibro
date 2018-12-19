@@ -1,6 +1,5 @@
-package com.example.oloralibro;
+package com.example.oloralibro.activities;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -9,20 +8,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.oloralibro.Adaptadores.RVAdaptadorPremios;
+import com.example.oloralibro.DatosPremios;
+import com.example.oloralibro.MetodosVarios;
+import com.example.oloralibro.R;
+import com.example.oloralibro.RepositorioDatos;
 
 import java.util.ArrayList;
 
 public class ActivityListaPremios extends AppCompatActivity {
 
     RecyclerView rvPremios;
-    Context context;
-    public ArrayList<DatosPremios> premios;
+    ArrayList<DatosPremios> premios;
     TextView txtViewMisPuntos;
     int misPuntos;
 
@@ -33,6 +33,9 @@ public class ActivityListaPremios extends AppCompatActivity {
         //Muestra el botón para ir atrás
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        //Esconde la StatusBar del movil
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_lista_premios);
 
         rvPremios = findViewById(R.id.rvPremios);
@@ -42,13 +45,13 @@ public class ActivityListaPremios extends AppCompatActivity {
         //EVITA QUE SE CAMBIE EL TAMAÑO DEL RECYVLERVIEW
         rvPremios.setHasFixedSize(true);
 
-
-        LinearLayoutManager llm = new LinearLayoutManager(context);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
         rvPremios.setLayoutManager(llm);
+
         premios = RepositorioDatos.getDatosPremios();
         RVAdaptadorPremios adaptador = new RVAdaptadorPremios(premios);
-
         rvPremios.setAdapter(adaptador);
+
         adaptador.setOnItemClickListener(new RVAdaptadorPremios.OnItemClickListener() {
 
             //METODO PARA LLAMAR AL EVENTO ONCLICK DEL BOTÓN CANJEAR
@@ -84,7 +87,6 @@ public class ActivityListaPremios extends AppCompatActivity {
                 if(premio.costePremio > misPuntos)
                 {
                     MetodosVarios.mostrarToast(getApplicationContext(), getString(R.string.puntos_insuf));
-
                 }
                 else
                 {
@@ -106,4 +108,86 @@ public class ActivityListaPremios extends AppCompatActivity {
         AlertDialog dialogo = builder.create();
         dialogo.show();;
     }
+
+    /*private void addItemsFromJSON()
+    {
+        try
+        {
+            String jsonDataString = readJSONFromFile();
+            JSONArray itemsJSONArray = new JSONArray(jsonDataString);
+
+            for(int contador = 0; contador < itemsJSONArray.length(); contador++)
+            {
+                JSONObject itemObject = itemsJSONArray.getJSONObject(contador);
+
+                String nombrePremio = itemObject.getString("Nombre");
+                String descripcionPremio = itemObject.getString("Descripcion");
+                String puntos = itemObject.getString("Puntos");
+                String urlImagenPremio = itemObject.getString("Ruta foto");
+
+                DatosPremios premio = new DatosPremios(nombrePremio, descripcionPremio, puntos, urlImagenPremio);
+                arrayPremiosJSON.add(premio);
+            }
+        }
+        catch (IOException | JSONException exception)
+        {
+            Log.e(ActivityListaPremios.class.getName(), "Error al cargar JSON", exception);
+        }
+    }
+
+    private String readJSONFromFile() throws IOException
+    {
+        InputStream inputStream = null;
+        StringBuilder builder = new StringBuilder();
+
+        try
+        {
+            String jsonDataString = null;
+            inputStream = getResources().openRawResource(R.raw.jsonpremios);
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(inputStream, "UTF-8"));
+            while ((jsonDataString = bufferedReader.readLine()) != null){
+                builder.append(jsonDataString);
+            }
+        } finally {
+            if (inputStream != null){
+                inputStream.close();
+            }
+        }
+
+        return new String(builder);
+    }*/
+
+    /*public void loadJSONFromAsset() throws IOException, JSONException
+    {
+        String json = null;
+
+        try
+        {
+            InputStream inputStream = context.getAssets().open("JSON_Premios.json");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+            json = new String(buffer, "UTF-8");
+
+            JSONObject obj = new JSONObject(json);
+            JSONArray jsonArrayPremios = obj.getJSONArray("Premios");
+            ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
+            HashMap<String, String> m_li;
+
+            for(int contador = 0; contador < jsonArrayPremios.length(); contador++)
+            {
+                JSONObject jo_inside = jsonArrayPremios.getJSONObject(contador);
+                String nombrePremio = jo_inside.getString("Nombre");
+                String descripcionPremio = jo_inside.getString("Descripcion");
+                String puntos = jo_inside.getString("Puntos");
+                String urlImagenPremio = jo_inside.getString("Ruta foto");
+            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }*/
 }

@@ -10,18 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".ActivityInfoLibreria">
+        tools:context=".activities.ActivityInfoLibreria">
 
         <TextView
             android:id="@+id/textViewLibreria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_titulos"
             tools:text="Abacus"
             android:gravity="center_horizontal"
             android:textSize="@dimen/titulos"
             android:textColor="@color/Letra_verde"/>
 
        <ImageView
+           android:id="@+id/imageViewFotoLibreria"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
@@ -53,6 +55,7 @@
             />
 
         <TextView
+            android:id="@+id/textViewListaActividades"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="@dimen/margen_titulos"
@@ -63,15 +66,8 @@
             android:textColor="@color/letra_blanco"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="@string/actividades_menu"/>
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margen_titulos"
-            android:layout_marginEnd="@dimen/margen_titulos">
-
-        </ListView>
+            android:clickable="true"
+            android:text="@string/mira_actividades"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -85,6 +81,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:text="@string/contacto"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,8 +96,10 @@
                 android:layout_marginEnd="@dimen/margen_titulos"
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Telefono:"/>
+                android:text="@string/telefono"/>
+
             <TextView
+                android:id="@+id/textViewTelefonoLibreria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -129,8 +128,10 @@
                 android:layout_marginEnd="@dimen/margen_titulos"
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Horario:"/>
+                android:text="@string/horario"/>
+
             <TextView
+                android:id="@+id/textViewHorarioLibreria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -158,8 +159,9 @@
                 android:layout_marginEnd="@dimen/margen_titulos"
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Correo:"/>
+                android:text="@string/correo"/>
             <TextView
+                android:id="@+id/textViewCorreoLibreria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -188,7 +190,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:clickable="true"
-            android:text="Pincha aquí y encuéntranos"/>
+            android:text="@string/encuentranos"/>
 
     </LinearLayout>
 

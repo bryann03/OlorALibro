@@ -11,10 +11,9 @@ import android.widget.TextView;
 
 import com.example.oloralibro.DatosLibreria;
 import com.example.oloralibro.R;
-import com.example.oloralibro.RecyclerViewOnItemClickListener;
+import com.example.oloralibro.Interfaces.RecyclerViewOnItemClickListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class RVAdaptadorLibrerias extends RecyclerView.Adapter<RVAdaptadorLibrerias.LibreriaViewHolder> {
 
